@@ -1,13 +1,22 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
+  const pathName = usePathname();
+
   const links = (
     <>
       <li>
-        <Link href="/home">Home</Link>
+        <Link className={pathName === "/home" ? "text-blue-600" : ""} href="/home">
+          Home
+        </Link>
       </li>
       <li>
-        <Link href="/about">About</Link>
+        <Link className={pathName === "/about" ? "text-blue-600" : ""} href="/about">
+          About
+        </Link>
       </li>
       <li>
         <Link href="/contact">Contact</Link>
