@@ -9,6 +9,7 @@ const UserIdPage = async ({ params }: ParamsProps) => {
 
   const res = await fetch(`https://jsonplaceholder.typicode.com/users/${userid}`);
   const data = await res.json();
+  //Here we get, Single object → access properties directly
 
   return (
     <div>

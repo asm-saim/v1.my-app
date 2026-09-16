@@ -1,7 +1,9 @@
+import Image from "next/image";
+
 const Page = () => {
   return (
     <div>
-      <h1>I am confident developer</h1>
+      <Image src="/globe.svg" width={500} alt="globe img" height={500}></Image>
     </div>
   );
 };
